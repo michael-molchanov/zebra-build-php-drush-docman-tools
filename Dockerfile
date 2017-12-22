@@ -10,7 +10,7 @@ RUN apk add --update --no-cache nodejs nodejs-npm nodejs-dev yarn \
   && npm install -g gulp-cli grunt-cli \
   && grunt --version \
   && gulp --version \
-  && yarn version
+  && yarn versions
 
 # Install compass.
 RUN gem install --no-ri --no-rdoc compass
