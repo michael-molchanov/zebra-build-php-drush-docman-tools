@@ -1,4 +1,4 @@
-FROM michaeltigr/zebra-build-php-drush-docman:0.0.88
+FROM michaeltigr/zebra-build-php-drush-docman:0.0.89
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
