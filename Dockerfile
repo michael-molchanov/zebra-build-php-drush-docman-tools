@@ -5,9 +5,12 @@ LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 USER root
 
 # Install nodejs and grunt.
-RUN apk add --update --no-cache --repository http://nl.alpinelinux.org/alpine/edge/main 'nodejs>8.9' 'nodejs-npm>8.9' 'nodejs-dev>8.9' 'yarn>1.5' \
+RUN echo -e "\n@edge http://nl.alpinelinux.org/alpine/edge/main\n@edgecommunity http://nl.alpinelinux.org/alpine/edge/community" | tee -a /etc/apk/repositories \
+  && apk add --update --no-cache libuv@edge nodejs@edge nodejs-npm@edge nodejs-dev@edge yarn@edgecommunity \
   && rm -rf /var/cache/apk/* \
   && npm install -g gulp-cli grunt-cli \
+  && node --version \
+  && npm --version \
   && grunt --version \
   && gulp --version \
   && yarn versions
