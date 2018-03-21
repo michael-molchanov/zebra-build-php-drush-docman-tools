@@ -18,4 +18,3 @@ RUN echo -e "\n@edge http://nl.alpinelinux.org/alpine/edge/main\n@edgecommunity 
 # Install compass.
 RUN gem install --no-ri --no-rdoc compass
 
-RUN composer global require hirak/prestissimo
